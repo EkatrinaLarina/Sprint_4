@@ -1,8 +1,6 @@
 package ru.yandex.practikum;
 
 import org.openqa.selenium.By;
-
-
 import org.openqa.selenium.WebDriver;
 
 
@@ -16,9 +14,7 @@ public class OrderPage extends BasePage {
     private By orderButtonNext = By.xpath("//button[text()='Далее']"); //локатор кнопки "Далее" на странице заказа
     private By orderTime = By.xpath("//input[@placeholder='* Когда привезти самокат']"); // локатор поля ввода "Когда привезти самокат" на странице заказа
     private By orderTimeFull = By.xpath("//div[@class='react-datepicker__day react-datepicker__day--016 react-datepicker__day--selected']"); //локатор для выбора даты в выпадающем календаре на странице заказа
-
     private By orderRentalPeriod = By.xpath("//div[@class='Dropdown-placeholder']"); // локатор для поля "Срок аренды" на странице заказа
-
     private By orderRentalTwoDay = By.xpath("//div[@class='Dropdown-option'] [2]"); //локатор выпадающего списка в поле "Срок аренды" (двое суток) на странице заказа
     private By orderRentalFourDay = By.xpath("//div[@class='Dropdown-option'] [4]"); //локатор выпадающего списка в поле "Срок аренды" (четверо суток) на странице заказа
     private By checkBoxGreyColorScooter = By.xpath("//input[@id='grey']"); // локатор чекбокса "Серая безысходность" на странице заказа
@@ -28,8 +24,6 @@ public class OrderPage extends BasePage {
     private By orderConfirmation = By.xpath("//div[text()='Заказ оформлен']"); // локатор подтверждения заказа
     private By orderCommentField = By.xpath("//input[@placeholder='Комментарий для курьера']"); //локатор поля ввода "Комментарий для курьера" на странице заказа
 
-
-
     public OrderPage(WebDriver webDriver) {
         super(webDriver);
     }
@@ -37,9 +31,11 @@ public class OrderPage extends BasePage {
     public void enterOrderName(String text) {
         webDriver.findElement(orderNameField).sendKeys(text);
     }
+
     public void enterOrderLastName(String text) {
         webDriver.findElement(orderLastNameField).sendKeys(text);
     }
+
     public void enterOrderAddress(String text) {
         webDriver.findElement(orderAddressField).sendKeys(text);
     }
@@ -51,33 +47,43 @@ public class OrderPage extends BasePage {
     public void clickMetroStationFull() {
         webDriver.findElement(orderMetroStationFieldFull).click();
     }
+
     public void enterNumberPhone(String text) {
         webDriver.findElement(orderNumberPhoneField).sendKeys(text);
     }
+
     public void clickOrderButtonNext() {
         webDriver.findElement(orderButtonNext).click();
     }
+
     public void enterOrderTime(String text) {
         webDriver.findElement(orderTime).sendKeys(text);
     }
+
     public void clickOrderTime() {
         webDriver.findElement(orderTimeFull).click();
     }
+
     public void clickOrderRentalPeriod() {
         webDriver.findElement(orderRentalPeriod).click();
     }
+
     public void enterOrderRentalTwoDay() {
         webDriver.findElement(orderRentalTwoDay).click();
     }
+
     public void enterOrderRentalFourDay() {
         webDriver.findElement(orderRentalFourDay).click();
     }
-    public void clickCheckBoxGreyColorScooter(){
+
+    public void clickCheckBoxGreyColorScooter() {
         webDriver.findElement(checkBoxGreyColorScooter).click();
     }
-    public void clickCheckBoxBlackColorScooter(){
+
+    public void clickCheckBoxBlackColorScooter() {
         webDriver.findElement(checkBoxBlackColorScooter).click();
     }
+
     public void enterOrderComment(String text) {
         webDriver.findElement(orderCommentField).sendKeys(text);
     }
@@ -85,11 +91,12 @@ public class OrderPage extends BasePage {
     public void clickOrderButtonOnOrderPage() {
         webDriver.findElement(orderButtonOnOrderPage).click();
     }
+
     public void clickOrderConfirmationButton() {
         webDriver.findElement(orderConfirmationButton).click();
     }
-    public boolean checkOrderConfirmationIsDisplayed(){
+
+    public boolean checkOrderConfirmationIsDisplayed() {
         return webDriver.findElement(orderConfirmation).isDisplayed();
     }
-
 }

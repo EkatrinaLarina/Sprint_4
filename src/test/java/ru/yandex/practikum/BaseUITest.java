@@ -12,7 +12,7 @@ import org.openqa.selenium.html5.WebStorage;
 import java.util.concurrent.TimeUnit;
 
 public class BaseUITest {
-    protected  static WebDriver webDriver;
+    protected static WebDriver webDriver;
 
     @BeforeClass
     public static void setup() {
@@ -31,8 +31,7 @@ public class BaseUITest {
     }
 
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
         webDriver.quit();
     }
-
 }

@@ -8,6 +8,4 @@ public abstract class BasePage {
     protected BasePage(WebDriver webDriver) {
         this.webDriver = webDriver;
     }
-
-
 }

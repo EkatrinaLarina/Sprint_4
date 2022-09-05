@@ -1,11 +1,9 @@
 package ru.yandex.practikum;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
-
-public class OrderScooterTest extends  BaseUITest {
+public class OrderScooterTest extends BaseUITest {
     @Test
     public void shouldBeOrderScooterOnButtonPageHeaderWithRequiredFieldTest() {
         OrderPage orderPage = new OrderPage(webDriver);
@@ -28,6 +26,7 @@ public class OrderScooterTest extends  BaseUITest {
         boolean isDisplayed = orderPage.checkOrderConfirmationIsDisplayed();
         Assert.assertTrue("Confirmation is not displayed", isDisplayed);
     }
+
     @Test
     public void shouldBeOrderScooterOnButtonPageHeaderWithFullFieldTest() {
         OrderPage orderPage = new OrderPage(webDriver);
@@ -52,8 +51,8 @@ public class OrderScooterTest extends  BaseUITest {
         boolean isDisplayed = orderPage.checkOrderConfirmationIsDisplayed();
         Assert.assertTrue("Confirmation is not displayed", isDisplayed);
     }
-    @Test
 
+    @Test
     public void shouldBeOrderScooterOnMiddlePageButtonWithRequiredFieldTest() {
         OrderPage orderPage = new OrderPage(webDriver);
         MainPage mainPage = new MainPage(webDriver);
@@ -76,8 +75,8 @@ public class OrderScooterTest extends  BaseUITest {
         boolean isDisplayed = orderPage.checkOrderConfirmationIsDisplayed();
         Assert.assertTrue("Confirmation is not displayed", isDisplayed);
     }
-    @Test
 
+    @Test
     public void shouldBeOrderScooterOnMiddlePageButtonWithFullFieldTest() {
         OrderPage orderPage = new OrderPage(webDriver);
         MainPage mainPage = new MainPage(webDriver);

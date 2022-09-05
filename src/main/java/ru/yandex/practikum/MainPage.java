@@ -1,7 +1,6 @@
 package ru.yandex.practikum;
 
 import org.openqa.selenium.By;
-
 import org.openqa.selenium.WebDriver;
 
 
@@ -24,76 +23,86 @@ public class MainPage extends BasePage {
     private By textDropDownSevenQuestion = By.xpath("//*[@id='accordion__panel-6']/p"); //локатор текста в седьмом выпадающем списке
     private By dropDownEightQuestion = By.xpath("(//div[@class='accordion__heading'])[8]");  //локатор выпадающего списка вопроса "Я жизу за МКАДом, привезёте?"
     private By textDropDownEightuestion = By.xpath("//*[@id='accordion__panel-7']/p");  //локатор текста в восьмом выпадающем списке
-
     private By buttonCookies = By.id("rcc-confirm-button");  // локатор кнопки куков "да все привыкли"
 
     public MainPage(WebDriver webDriver) {
         super(webDriver);
     }
+
     public void open() {
         webDriver.get("https://qa-scooter.praktikum-services.ru/");
     }
+
     public void clickOrderButton() {
         webDriver.findElement(orderButton).click();
     }
+
     public void clickOrderButtonOnMiddlePage() {
         webDriver.findElement(orderButtonOnMiddlePage).click();
     }
+
     public void clickDropDownOneQuestion() {
         webDriver.findElement(dropDownOneQuestion).click();
     }
+
     public String getTextDropDownOneQuestion() {
         return webDriver.findElement(textDropDownOneQuestion).getText();
-
     }
+
     public void clickDropDownTwoQuestion() {
         webDriver.findElement(dropDownTwoQuestion).click();
     }
+
     public String getTextDropDownTwoQuestion() {
         return webDriver.findElement(textDropDownTwoQuestion).getText();
-
     }
+
     public void clickDropDownThreeQuestion() {
         webDriver.findElement(dropDownThreeQuestion).click();
     }
+
     public String getTextDropDownThreeQuestion() {
         return webDriver.findElement(textDropDownThreeQuestion).getText();
-
     }
+
     public void clickDropDownFourQuestion() {
         webDriver.findElement(dropDownFourQuestion).click();
     }
+
     public String getTextDropDownFourQuestion() {
         return webDriver.findElement(textDropDownFourQuestion).getText();
-
     }
+
     public void clickDropDownFiveQuestion() {
         webDriver.findElement(dropDownFiveQuestion).click();
     }
+
     public String getTextDropDownFiveQuestion() {
         return webDriver.findElement(textDropDownFiveQuestion).getText();
-
     }
+
     public void clickDropDownSixQuestion() {
         webDriver.findElement(dropDownSixQuestion).click();
     }
+
     public String getTextDropDownSixQuestion() {
         return webDriver.findElement(textDropDownSixQuestion).getText();
-
     }
+
     public void clickDropDownSevenQuestion() {
         webDriver.findElement(dropDownSevenQuestion).click();
     }
+
     public String getTextDropDownSevenQuestion() {
         return webDriver.findElement(textDropDownSevenQuestion).getText();
-
     }
+
     public void clickDropDownEightQuestion() {
         webDriver.findElement(dropDownEightQuestion).click();
     }
+
     public String getTextDropDownEightQuestion() {
         return webDriver.findElement(textDropDownEightuestion).getText();
-
     }
 
     public void clickButtonCookies() {
